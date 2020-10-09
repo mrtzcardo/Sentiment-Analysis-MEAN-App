@@ -1,0 +1,13 @@
+# TODO - Switch to alpine when python app is seperated
+FROM node:lts-alpine as builder
+COPY . /sentiment-analysis
+WORKDIR /sentiment-analysis
+RUN npm install -g @angular/cli && \
+    npm install && \
+    ng build
+
+FROM node:node:lts-alpine as app
+COPY --from=builder /sentiment-analysis /sentiment-analysis
+WORKDIR /sentiment-analysis
+EXPOSE 3000
+CMD ["node", "server.js"]

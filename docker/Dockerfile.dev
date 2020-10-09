@@ -1,0 +1,16 @@
+FROM node:lts-stretch-slim
+
+COPY package*.json /sentiment-analysis/
+
+WORKDIR /sentiment-analysis
+
+RUN npm install -g @angular/cli && \
+    npm install
+
+COPY . /sentiment-analysis
+
+RUN ng build
+
+EXPOSE 3000
+
+CMD ["node", "server.js"]

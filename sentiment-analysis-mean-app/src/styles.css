@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+button {
+  border: none;
+}
+
+* {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+*:focus{
+  outline:none;
+}
+  
+nav {
+  height: 60px;
+}
+
+.app-navbar {
+  height: 100%;
+  width: 100%;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:2;
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+ }
+
+ .example-card {
+  margin:0 auto;
+  width:100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.input-full-width {
+  margin:0 auto;
+  margin-bottom: 10px;
+  width:100%;
+  max-width: 400px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
